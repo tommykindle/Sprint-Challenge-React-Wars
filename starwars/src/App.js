@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './App.scss';
-import axios from 'axios';
+import CharcterCard from './CharacterCard'
 // Try to think through what state you'll need for this app before starting. Then build out
 // the state properties here.
 // Fetch characters from the star wars api in an effect hook. Remember, anytime you have a
@@ -9,17 +9,9 @@ import axios from 'axios';
 
 const App = () => {
 
-  useEffect(() => {
-    axios
-      .get('https://swapi.co/api/people')
-      .then(res => {
-        console.log('Result', res);
-      })
-  }, [])
-
-
   return (
     <div className="App">
+      <CharcterCard />
       <h1 className="Header">React Wars</h1>
     </div>
   );
